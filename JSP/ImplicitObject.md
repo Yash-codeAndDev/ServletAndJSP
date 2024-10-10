@@ -10,3 +10,16 @@
     7. *pageContext* : Provides access to page-level attributes and contains methods to handle scoped variables (page, request, session, and application). It also gives access to all other implicit objects.
     8. *page* : Refers to the current instance of the JSP page (equivalent to this in Java). Typically, you won’t need to use page directly.
     9. *exception* : Available only in JSP error pages, it represents the exception object that triggered the error page. This is useful for displaying or logging detailed error information.
+
+ 
+| **Implicit Object** | **Type**                               | **Purpose**                                                                 |
+|---------------------|----------------------------------------|-----------------------------------------------------------------------------|
+| `request`           | `HttpServletRequest`                   | Provides request data (parameters, attributes, headers)                     |
+| `response`          | `HttpServletResponse`                  | Sends response data back to the client (set headers, status codes)          |
+| `session`           | `HttpSession`                          | Manages user session data across multiple requests                          |
+| `application`       | `ServletContext`                       | Manages application-wide data and settings                                  |
+| `out`               | `JspWriter`                            | Outputs content to the client (like `System.out` for HTML content)          |
+| `config`            | `ServletConfig`                        | Provides configuration details for the current servlet                      |
+| `pageContext`       | `PageContext`                          | Accesses page attributes and manages scope                                  |
+| `page`              | `Object`                               | Refers to the current instance of the JSP page                              |
+| `exception`         | `Throwable`                            | Provides access to exceptions on error pages                                |
